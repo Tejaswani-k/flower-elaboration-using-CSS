@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent{
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(to top left,orange 20%,white 30%,green 40%,orange 50%,white 60%,green 80%);
+            border: 3px black solid;
+            position: relative;
+            left:200px ;
+            top:150px;
+            animation: all 20s 1s infinite;
+        }
+        @keyframes all{
+        from{
+            filter: hue-rotate(0deg);
+        }
+        to{
+            filter: hue-rotate(2000deg);
+        }
+        
+        }
+        .common{
+            width: 200px;
+            height: 200px;
+            background-color: deeppink;
+            margin: 10px;
+            border-radius: 300px 0px 300px 0px;
+            position: absolute;
+            rotate:-45deg;
+            left:37px;
+            bottom:180px;
+            transition:all 5s;
+        }
+        .parent:hover .child1{
+            rotate:-25deg;
+        }
+        .parent:hover .child2{
+            rotate:0deg;
+        }
+        .parent:hover .child3{
+            rotate:-60deg;
+        }
+        .parent:hover .child4{
+            rotate:-90deg;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+            position: absolute;
+            left: 45px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <!-- .commonchild$*5
+    selection===>ctrl+alt+downarrow-->
+    <div class="common child1"></div>
+    <div class="common child2"></div>
+    <div class="common child3"></div>
+    <div class="common child4"></div>
+    <div class="common child5"></div>
+    <div class="box"></div>
+
+    
+</body>
+</html>
